@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono&display=swap');
+body {
+  background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+  margin: 0;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center; 
+  flex-direction: column;
+  font-family: monospace;
+  align-items: center;
+  color: #555;
+  overflow: auto;
+  transition: 0.5s;
+  font-family: 'Chivo Mono', monospace;
+
+} 
+  .mainBodyActive{
+    left: 240px;
+    width: calc(100% - 240px);
+  }
+  .my-container{
+    width: calc(100% - 78px);
+    position: absolute;
+    left: 78px;
+    height: 98vh;
+    transition: all 0.5s ease;
+    z-index: 0;
+    margin: 0;
+    top: 0;
+    margin-top: 10px;
+    overflow: hidden;
+  }
+  
+  .mainBodyActive{
+    left: 240px;
+    width: calc(100% - 240px);
+  }
+  /* :has check xem phần tử có chứa phần tử con không */
+.changeTheme:has(input:checked) {
+  background-color: #4cb774;
+}
+.changeTheme:has(input:checked)::before {
+  left: calc(100% - 35px);
+}
+body:has(input[name="changeTheme"]:checked) {
+  background-image: linear-gradient(
+      to top, #1a1f39, black
+  );
+  color: white;
+}
